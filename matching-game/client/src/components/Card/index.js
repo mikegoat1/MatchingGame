@@ -3,13 +3,17 @@ import "./style.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 
-function Cards({ name, backgroundImage }) {
+function Cards({ name, backgroundImage, selected, toggleClass }) {
 
 
     return (
     
 
-            <div className="card" data={name} style={{ backgroundImage: `url(${backgroundImage})` }} >
+            <div 
+            onClick={toggleClass} 
+            className={`card ${selected ? "selected" : null }`} 
+            data={name} 
+            style={{ backgroundImage: `url(${backgroundImage})` }} >
                     
             </div>
 
